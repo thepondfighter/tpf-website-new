@@ -1,0 +1,20 @@
+.red_line {
+    padding-left: 0!important;
+    padding-right: 0!important;
+    /* margin-left: -5%;
+    width: 110%; */
+    background-color: #c32148;
+  }
+  
+  .red_line h1 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0px; 
+    padding: 8px;
+  }
+
+  
+
+
+  

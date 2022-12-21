@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+/*
+Story by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+@media screen and (min-width: 736px) {
+    .spotlight {
+        margin-bottom: 8px; 
+    }
+}
+
+
+
+
+
+html, body, div, h2, p, img, section {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;}
+section {
+display: block;}
+body {
+line-height: 1;
+}
+body {
+-webkit-text-size-adjust: none;
+}
+/* Basic */
+@-ms-viewport {
+width: device-width;
+}
+body {
+-ms-overflow-style: scrollbar;
+}
+@media screen and (max-width: 480px) {
+html, body {
+min-width: 320px;
+}
+}
+html {
+box-sizing: border-box;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+body {
+background: #ffffff;
+}
+/* Type */
+html {
+font-size: 18pt;
+}
+@media screen and (max-width: 1680px) {
+html {
+font-size: 14pt;
+}
+}
+@media screen and (max-width: 1280px) {
+html {
+font-size: 12pt;
+}
+}
+@media screen and (max-width: 736px) {
+html {
+font-size: 11pt;
+}
+}
+@media screen and (max-width: 360px) {
+html {
+font-size: 10pt;
+}
+}
+body {
+background-color: #ffffff;
+color: #000000;
+}
+body {
+font-family: "Source Sans Pro", Helvetica, sans-serif;
+font-size: 1rem;
+font-weight: 300;
+line-height: 1.65!important;
+}
+p {
+margin: 0 0 2rem 0;
+}
+h2 {
+font-weight: 300;
+line-height: 1.375;
+letter-spacing: -0.05em;
+margin: 0 0 1rem 0;
+}
+h2 {
+font-size: 2.25rem;
+}
+@media screen and (max-width: 736px) {
+h2 {
+font-size: 2rem;
+}
+}
+h2 {
+color: #000000;
+}
+/* Row */
+/* Box */
+/* Button */
+/* Form */
+::-webkit-input-placeholder {
+opacity: 1.0;
+}
+:-moz-placeholder {
+opacity: 1.0;
+}
+::-moz-placeholder {
+opacity: 1.0;
+}
+:-ms-input-placeholder {
+opacity: 1.0;
+}
+::-webkit-input-placeholder {
+color: rgba(0, 0, 0, 0.75) !important;
+}
+:-moz-placeholder {
+color: rgba(0, 0, 0, 0.75) !important;
+}
+::-moz-placeholder {
+color: rgba(0, 0, 0, 0.75) !important;
+}
+:-ms-input-placeholder {
+color: rgba(0, 0, 0, 0.75) !important;
+}
+/* Icon */
+/* Image */
+.image {
+border: 0;
+border-radius: 4px;
+display: inline-block;
+position: relative;
+}
+.image img {
+display: block;
+border-radius: 4px;
+}
+/* List */
+/* Actions */
+/* Icons */
+/* Section/Article */
+/* Table */
+/* Banner (transitions) */
+/* Banner (style1) */
+/* Banner (style2) */
+/* Banner (style3) */
+/* Banner (style4) */
+/* Banner (style5) */
+/* Spotlight (transitions) */
+.spotlight.onscroll-image-fade-in .image img {
+-moz-transition: opacity 0.75s ease-in-out;
+-webkit-transition: opacity 0.75s ease-in-out;
+-ms-transition: opacity 0.75s ease-in-out;
+transition: opacity 0.75s ease-in-out;
+}
+/* Spotlight (style1) */
+.spotlight.style1 {
+-moz-align-items: -moz-stretch;
+-webkit-align-items: -webkit-stretch;
+-ms-align-items: -ms-stretch;
+align-items: stretch;
+display: -moz-flex;
+display: -webkit-flex;
+display: -ms-flex;
+display: flex;
+-moz-flex-direction: row;
+-webkit-flex-direction: row;
+-ms-flex-direction: row;
+flex-direction: row;
+-moz-justify-content: -moz-flex-end;
+-webkit-justify-content: -webkit-flex-end;
+-ms-justify-content: -ms-flex-end;
+justify-content: flex-end;
+position: relative;
+overflow-x: hidden;
+text-align: left;
+}
+.spotlight.style1 .content {
+padding: 7rem 7rem 5rem 7rem ;
+-moz-align-self: center;
+-webkit-align-self: center;
+-ms-align-self: center;
+align-self: center;
+-moz-flex-grow: 1;
+-webkit-flex-grow: 1;
+-ms-flex-grow: 1;
+flex-grow: 1;
+-moz-flex-shrink: 1;
+-webkit-flex-shrink: 1;
+-ms-flex-shrink: 1;
+flex-shrink: 1;
+width: 65%;
+max-width: 64rem;
+margin: 0 auto;
+}
+.spotlight.style1 .image {
+-moz-flex-grow: 0;
+-webkit-flex-grow: 0;
+-ms-flex-grow: 0;
+flex-grow: 0;
+-moz-flex-shrink: 0;
+-webkit-flex-shrink: 0;
+-ms-flex-shrink: 0;
+flex-shrink: 0;
+width: 35%;
+min-width: 25rem;
+border-radius: 0;
+}
+.spotlight.style1 .image img {
+-moz-object-fit: cover;
+-webkit-object-fit: cover;
+-ms-object-fit: cover;
+object-fit: cover;
+-moz-object-position: center;
+-webkit-object-position: center;
+-ms-object-position: center;
+object-position: center;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 0;
+}
+@media screen and (max-width: 1680px) {
+.spotlight.style1 .content {
+padding: 5rem 5rem 3rem 5rem ;
+}
+}
+@media screen and (max-width: 1280px) {
+.spotlight.style1 .content {
+padding: 4rem 4rem 2rem 4rem ;
+}
+}
+@media screen and (max-width: 980px) {
+.spotlight.style1 .content {
+padding: 3.75rem 3rem 1.75rem 3rem ;
+width: 50%;
+min-width: 0;
+}
+.spotlight.style1 .image {
+width: 50%;
+min-width: 0;
+}
+}
+@media screen and (max-width: 736px) {
+.spotlight.style1 .content {
+padding: 0;
+padding-top: 2.5rem;
+}
+}
+@media screen and (max-width: 736px) and (orientation: portrait) {
+.spotlight.style1 {
+-moz-flex-direction: column-reverse;
+-webkit-flex-direction: column-reverse;
+-ms-flex-direction: column-reverse;
+flex-direction: column-reverse;
+text-align: center !important;
+}
+.spotlight.style1 .content {
+width: 100%;
+}
+.spotlight.style1 .image {
+width: 100%;
+}
+.spotlight.style1 .image img {
+position: relative;
+}
+}
+.spotlight.style1.orient-right {
+-moz-flex-direction: row-reverse;
+-webkit-flex-direction: row-reverse;
+-ms-flex-direction: row-reverse;
+flex-direction: row-reverse;
+}
+@media screen and (max-width: 736px) and (orientation: portrait) {
+.spotlight.style1.orient-right {
+-moz-flex-direction: column-reverse;
+-webkit-flex-direction: column-reverse;
+-ms-flex-direction: column-reverse;
+flex-direction: column-reverse;
+}
+}
+/* Spotlight (style2) */
+/* Spotlight (style3) */
+/* Spotlight (style4) */
+/* Spotlight (style5) */
+.spotlight .image {
+background-color: rgba(0, 0, 0, 0.125);
+}
+/* Gallery (transitions) */
+/* Gallery (style1) */
+/* Gallery (style2) */
+/* Gallery (lightbox) */
+/* Wrapper (style1) */
+/* Wrapper (style2) */
+/* Items (transitions) */
+/* Items (style1) */
+/* Items (style2) */
+/* Items (style3) */
+/* Index */
+/* Wrapper */

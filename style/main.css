@@ -1,121 +1,176 @@
-	/* bootstrap carousel caption size  */
-    .carousel-caption p {
-		font-size: 18px;
-		font-weight: 600;
-		}
-		/* datepicker */
-		.input-group-append {
-		cursor: pointer;
-		}
-		/* google maps autocomplete bootdtrap modal */
-		/* .pac-container {
-		z-index: 2000;
-		} */
-		#wrapper {
-		padding: 20px;
-		margin-top: 20px;
-		line-height: 1.65;
-		}
-		/* dark theme */
-		body, .navbar{
-		background-color: rgb(15,18,22)!important;
-		/* background-color: #344151!important; */
-		}
-		.carousel-caption {
-		padding-bottom: 0;
-		bottom: 0;
-		}
-		.fl-heading {
-		background-color: #c32148;
-		color: white;
-		text-align: center;
-		font-family: sans-serif;
-		display: block;
-		padding: 10px;
-		margin-top: 0;
-		margin-bottom: 5px;
-		border-radius: 12px;
-		}
-		.red_line {
-		padding-left: 0!important;
-		padding-right: 0!important;
-		background-color: #c32148;
-		}
-		.card-title {
-		text-align: center;
-		}
-		.card {
-		margin-bottom: 20px!important;
-		padding-right: 0;
-		padding-left: 0;
-		}
-		.list-group-item {
-		text-align: center;
-		}
-		.Service-list {
-		color: inherit;
-		}
-		/* make form look like boa */
-		.form-label {
-		font-size: 14px; 
-		margin-bottom: 0;
-		}
-		/* hide input on focus xxx-xxx-xxxx */
-		input:focus::placeholder {
-		color: transparent;
-		}
-		/* horizonatal scroll menu */
-		div.scrollmenu {
-		background-color: #333;
-		overflow: auto;
-		white-space: nowrap;
-		padding: 8px;
-		}
-		div.scrollmenu::-webkit-scrollbar {
-		display: none;
-		}
-		div.scrollmenu a {
-		display: inline-block;
-		color: white;
-		text-align: center;
-		padding: 8px;
-		text-decoration: none;
-		border-radius: 8px;
-		margin-right:12px;
-		background-color: rgba(255,255,255,0.1);
-		}
-		div.scrollmenu a:hover {
-		background-color: lightseagreen;
-		}
-		/* mobile card title font-size */ 
-		@media screen and (max-width: 480px) {
-		.card-title {
-		font-size: .7rem;
-		}
-		}
-		/* dropzone file-drop movbile height */
-		@media screen and (max-width: 480px) {
-		.dropzone {
+:root {
+	--doc-height: 100%;
+   }
+   
+
+
+
+.w-100 {
+
+	height: var(--doc-height);
+	max-width: 100%!important;
+	object-fit:cover
+	
+
+
+}
+
+
+
+
+/* submit button contact form */
+#submit-all {
+	max-width: 100%;
+	width: 100%;
+	background-color: #222;
+	color: white;
+	border-radius: 0.25rem;
+	border: none; 
+
+
+
+}
+
+
+
+
+
+/* text inside card */
+.list-group-flush>.list-group-item {
+	font-size: .7rem;
+}
+/* when clicked buttons for pond cleaing service sizes */
+.card button.highlighted {
+	background-color: red!important;
+}
+/* bootstrap carousel caption size */
+.carousel-caption p {
+	font-size: 18px;
+	font-weight: 600;
+}
+/* datepicker */
+.input-group-append {
+	cursor: pointer;
+}
+/* google maps autocomplete bootdtrap modal */
+/* .pac-container {
+	z-index: 2000;
+}
+*/
+#wrapper {
+	padding: 20px;
+	margin-top: 20px;
+	line-height: 1.65;
+}
+/* dark theme */
+body, .navbar{
+	/* background-color: rgb(15,18,22)!important; */
+   /* background-color: #344151!important;
+	*/
+}
+.carousel-caption {
+	padding-bottom: 0;
+	bottom: 0;
+}
+.fl-heading {
+	/* background-color: #c32148; */
+	color: black;
+	text-align: center;
+	font-family: sans-serif;
+	display: block;
+	padding: 10px;
+	margin-top: 0;
+	margin-bottom: 5px;
+	/* border-radius: 12px; */
+	border: 2px solid #c32148;
+}
+.red_line {
+	padding-left: 0!important;
+	padding-right: 0!important;
+	background-color: #c32148;
+}
+.card-title {
+	text-align: center;
+	color:black!important;
+}
+.card {
+	margin-bottom: 20px!important;
+	padding-right: 0;
+	padding-left: 0;
+}
+#price {
+	color: black!important;
+}
+.card button {
+	background-color: aqua!important;
+}
+.list-group-item {
+	text-align: center;
+}
+.Service-list {
+	color: inherit;
+}
+/* make form look like boa */
+.form-label {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+/* hide input on focus xxx-xxx-xxxx */
+input:focus::placeholder {
+	color: transparent;
+}
+/* horizonatal scroll menu */
+div.scrollmenu {
+	background-color: #333;
+	overflow: auto;
+	white-space: nowrap;
+	padding: 8px;
+}
+div.scrollmenu::-webkit-scrollbar {
+	display: none;
+}
+div.scrollmenu a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	text-decoration: none;
+	border-radius: 8px;
+	margin-right:12px;
+	background-color: rgba(255,255,255,0.1);
+}
+div.scrollmenu a:hover {
+	background-color: lightseagreen;
+}
+/* mobile card title font-size */
+@media screen and (max-width: 480px) {
+	.card-title {
+		font-size: 1.1rem;
+   }
+}
+/* dropzone file-drop movbile height */
+@media screen and (max-width: 480px) {
+	.dropzone {
 		min-height: 90px;
 		padding: 0;
 		margin-bottom: 12px;
-		}
-		}
-		/* bootstrap multiselect */
-		/* multi select width */
-		.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
-		width:100%;
-		}
-		/* multiselect optgroup label padding-bottom 0 for more space */
-		.dropdown-header {
-		padding-bottom: 0;
-		}
-		/* optgroup options left padding reduce to show checkmarks */
-		.bootstrap-select .dropdown-menu li a.opt {
-		position: relative;
-		padding-left: 1.25em;
-		}
-		/* whitespace nowrap services box */
-		.bootstrap-select>.dropdown-toggle {
-		white-space: normal;
-		}
+   }
+}
+/* bootstrap multiselect */
+/* multi select width */
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	width:100%;
+}
+/* multiselect optgroup label padding-bottom 0 for more space */
+.dropdown-header {
+	padding-bottom: 0;
+}
+/* optgroup options left padding reduce to show checkmarks */
+.bootstrap-select .dropdown-menu li a.opt {
+	position: relative;
+	padding-left: 1.25em;
+}
+/* whitespace nowrap services box */
+.bootstrap-select>.dropdown-toggle {
+	white-space: normal;
+}

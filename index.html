@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="preload" fetchpriority="high" as="image" href="carousel-mobile-images/fountain-lights-mobile-lossless.webp" type="image/webp">
+		<link rel="preload" fetchpriority="high" as="image" href="tall-min.webp" type="image/webp">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,55 +35,61 @@
 		<link href="style/gallery.css" rel="stylesheet">
 		<!-- main.css -->
 		<link href="style/main.css" rel="stylesheet">
+		<!-- nav.css -->
+		<link href="style/nav.css" rel="stylesheet">
+
+
+			<!-- main.js -->
+			<script src="jS/main.js"></script>
 
 		<!-- dropzone -->
 		<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
 		<link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 	</head>
-	<script>
-		//xxx-xxx-xxxx hint for phone input
-		function show_hint(x) {
-			document.getElementById("hint").style.display = "block";
-		
-		  
-		}
-		
-		function hide_hint(x) {
-			document.getElementById("hint").style.display = "none";
-		
-		  
-		}
-		//no spam hint for email input
-		
-		function show_hint_email(x) {
-			document.getElementById("hint_email").style.display = "block";
-		
-		  
-		}
-		
-		function hide_hint_email(x) {
-			document.getElementById("hint_email").style.display = "none";
-		
-		  
-		}
-		
-		
-		
-	</script>
 	
+	<!-- <style>
+		.header-to-scroll {
+
+			background-color: black;
+    color: #666;
+    z-index: 110;
+    width: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transition-timing-function: cubic-bezier(.075,.82,.165,1);
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(.19,1,.22,1);
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 5%);
+	height: 0px; 
+	position: absolute;
+
+
+
+
+
+		}
+
+		.is-scrolled{
+			height: 60px;
+			position: fixed;
+		}
+	</style> -->
+
+
 	<body style="line-height: 1;">
-		<nav style="padding-top: 0; padding-bottom: 0;" class="navbar sticky-top justify-content-end navbar-expand-md navbar-dark bg-light">
-			<div class="container-fluid">
+		<nav style="padding-top: 0; padding-bottom: 0; z-index:1020;" class="navbar sticky-top justify-content-end navbar-expand-md navbar-dark">
+			<div style="padding-left: 0;" class="container-fluid">
 				<a class="navbar-brand" href="index.html">
-				<img src="images/logo-short-copy.png" alt="" width="140" height="47">
+				<img src="Untitled-3.png" alt="" width="auto" height="48">
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
-				<div style="flex-grow: 0 " class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+						<li>
+							<a href="index.html" >Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="pond-cleaning-service.html">Cleaning </a>
@@ -101,9 +107,36 @@
 							<a class="nav-link active" aria-current="page" href="pricing.html">Pricing</a>
 						</li>
 					</ul>
+					<div class="overlay">
+					</div>
 				</div>
-			</div>
 		</nav>
+		<div id="hts" class="header-to-scroll">
+		</div>
+		<script>
+window.addEventListener('scroll',handleScroll);
+
+function handleScroll(){
+      let scrollPosition = window.pageYOffset || window.scrollY || document.body.scrollTop || document.documentElement.scrollTop;
+	  if(scrollPosition >50) {
+
+		element = document.getElementById("hts");
+		element.classList.add("is-scrolled");
+
+	  } else {
+		element = document.getElementById("hts");
+
+		element.classList.remove("is-scrolled");
+
+
+	  }
+    
+  
+
+}
+
+
+				</script>
 		<!-- horizontal scroll menu -->
 		<!-- <div class="scrollmenu">
 			<a href="#contact">443-452-9045</a>
@@ -114,24 +147,43 @@
 			<a href="pond-construction.html">Construction</a>
 			<a href="pond-repair.html0">Repair</a>
 			</div> -->
-		<!-- carasole -->
-		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+		<!-- dyanmic carasole image height depending on window innerheight -->
+		<script src="JS/inner-height.js"></script>
+
+
+	
+	
+		
+	
+		<div style="margin-top:-61px; " id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-interval="false">
 			<div class="carousel-inner">
 				<div class="carousel-item active" data-bs-interval="10000">
 					<picture>
-						<source media="(max-width: 599px)" srcset="carousel-mobile-images/fountain-lights-mobile-lossless.webp">
-						<img class="w-100" src="carousel-desktop-images/fountain-lights-desktop.jpg" alt="June and Wilfredo putting leaves inside a bag."> 
+						<source media="(max-width: 599px)" srcset="tall-min.webp">
+			
+						<img class="w-100 akak" src="carousel-desktop-images/fountain-lights-desktop.jpg" alt="June and Wilfredo putting leaves inside a bag."> 
 					</picture>
 					<div class="carousel-caption">
 						<h5></h5>
 						<p>Custom Fountain Build Glen Burnie, MD</p>
 					</div>
 				</div>
+			
 				<!-- builds -->
 				<div class="carousel-item">
 					<picture>
+						<source media="(max-width: 599px)" srcset="tall-owings-build.jpg">
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/upper-marlboro-pond-build-desktop.jpg" alt="2"> 
+					</picture>
+					<div class="carousel-caption ">
+						<h5></h5>
+						<p>Pond Build Upper Marlboro, MD</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/upper-marlboro-pond-build-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/upper-marlboro-pond-build-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/upper-marlboro-pond-build-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -141,7 +193,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/owings-mills-rebuild-mobile.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/owings-mills-rebuild-desktop.jpg" alt="3"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/owings-mills-rebuild-desktop.jpg" alt="3"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -151,7 +203,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/koi-pond-with-2-waterfalls-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/koi-pond-with-2-waterfalls-desktop.png" alt="5"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/koi-pond-with-2-waterfalls-desktop.png" alt="5"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -161,7 +213,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/pondless-waterfall-ellicott-city-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/pondless-waterfall-ellicott-city.jpg" alt="6"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/pondless-waterfall-ellicott-city.jpg" alt="6"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -171,7 +223,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/virginia-pond-build.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/virginia-pond-build-desktop.jpg" alt="10"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/virginia-pond-build-desktop.jpg" alt="10"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -181,7 +233,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/ticondoroga-pondless.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/ticondoroga-pondless-desktop.jpg" alt="8"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/ticondoroga-pondless-desktop.jpg" alt="8"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -191,7 +243,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/enclosed-water-feature-2.png">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/enclosed-water-feature-desktop.jpg" alt="7"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/enclosed-water-feature-desktop.jpg" alt="7"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -201,7 +253,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/germantown-pond-build.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/germantown-pond-build-desktop-2.png" alt="9"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/germantown-pond-build-desktop-2.png" alt="9"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -211,7 +263,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/pondless-repair-mobile.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/pondless-repair-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/pondless-repair-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -223,7 +275,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/furbay-before-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/gold-fish-pond-before-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/gold-fish-pond-before-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -233,7 +285,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/furbay-after-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/gold-fish-pond-after-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/gold-fish-pond-after-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -244,7 +296,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/hyattsville-before-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/mansion-pond-before-desktop.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/mansion-pond-before-desktop.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -254,7 +306,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/hyattsville-after-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/mansion-pond-after-desktop.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/mansion-pond-after-desktop.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -265,7 +317,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/pond-wall-repair-mobile.png">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/pond-wall-repair-desktop.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/pond-wall-repair-desktop.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -276,7 +328,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/pond-cleaning-aerial-view-mobile.png">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/pond-cleaning-aerial-view.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/pond-cleaning-aerial-view.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -287,7 +339,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/pond-cleaning-before-mobile.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/commercial-pond-before-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/commercial-pond-before-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -297,7 +349,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/pond-cleaning-after-mobile.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/commercial-pond-after-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/commercial-pond-after-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -308,7 +360,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/ellicott-city-before-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/large-round-formal-pond-before-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/large-round-formal-pond-before-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -318,7 +370,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/ellicott-city-after-mobile.webp">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/large-round-formal-pond-desktop.jpg" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/large-round-formal-pond-desktop.jpg" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -329,7 +381,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/pond-plumbing.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/pond-pvc-replacement-desktop.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/pond-pvc-replacement-desktop.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -340,7 +392,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/bernard-before-mobile.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/bowie_before_large.PNG" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/bowie_before_large.PNG" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -350,7 +402,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/bernard-after.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/bowie_after_large.PNG" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/bowie_after_large.PNG" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -361,7 +413,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/round-pond-build.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/round-koi-pond.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/round-koi-pond.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -372,7 +424,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/jim-before-mobile.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/jim-before.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/jim-before.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -382,7 +434,7 @@
 				<div class="carousel-item">
 					<picture>
 						<source media="(max-width: 599px)" srcset="carousel-mobile-images/jim-after-mobile.jpg">
-						<img loading="lazy" class="w-100" src="carousel-desktop-images/jim-after.png" alt="2"> 
+						<img loading="lazy" class="w-100 akak" src="carousel-desktop-images/jim-after.png" alt="2"> 
 					</picture>
 					<div class="carousel-caption ">
 						<h5></h5>
@@ -407,9 +459,27 @@
 			<span class="visually-hidden">Next</span>
 			</button>
 		</div>
+		<!-- mobile viewport height minus navbar top and bottom -->
+
+		<!-- <script>
+			var x = window.innerHeight;
+
+			document.addEventListener("DOMContentLoaded", function(event) { 
+				var slider_mobile_images = document.getElementsByClassName("w-100 akak");
+
+				for (var i = 0; i < slider_mobile_images.length; i++) {
+				
+					slider_mobile_images[i].style.height = x + "px";
+				
+				}  });
+
+
+
+		</script> -->
+		<!-- carousel end -->
 		<!-- Wrapper -->
-		<div id="wrapper" style="margin-top: 0;" class="divided">
-			<div style="max-width: 800px; border-radius: 18px; background-color: white; border: 2px solid teal; padding: 12px; width: 100% ;margin: 0 auto;">
+		<div id="wrapper" style="padding: 0px; margin-top: 0;" class="divided">
+			<div style="max-width: 800px; background-color: white; border: 2px solid teal; padding: 12px; width: 100% ;margin: 0 auto;">
 				<h4 class="fl-heading">Contact Form</h4>
 				<div class="row">
 					<div class="col-12">
@@ -467,7 +537,7 @@
 					</form>
 				</div>
 				<!-- datepicker -->
-				<form class="row">
+				<!-- <form class="row">
 					<label for="inputDate" class="form-label">Preferred Date of Service</label>					
 					<div class="col-12">
 						<div class="input-group date" id="datepicker">
@@ -479,9 +549,9 @@
 							</span>
 						</div>
 					</div>
-				</form>
+				</form> -->
 				<!-- preferred method of contact -->
-				<div class="col-12">
+				<!-- <div class="col-12">
 					<label for="inputAddress" class="form-label">Preferred method of contact </label>
 					<br>
 					<div class="form-check form-check-inline">
@@ -492,7 +562,7 @@
 						<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
 						<label class="form-check-label" for="inlineCheckbox2">Email</label>
 					</div>
-				</div>
+				</div> -->
 				<input id="submit-all" type="submit" value="Submit"> 
 			</div>
 		</div>
@@ -567,39 +637,47 @@
 		<div id="service-list" class="red_line">
 			<h1 style="text-align: center; color: white;padding: 8px;">Services</h1>
 		</div>
-		<section class="wrapper style1 align-center">
+		<section style="padding-left: 20px;" class="wrapper style1 align-center">
 			<div class="gallery style2 medium lightbox onscroll-fade-in">
 				<article>
 					<div class="card" style="">
+						
+						<!-- <img id="pricing-image"src="pond-cleaning-images-sizes/small-pond-vertical.jpg" alt="" class="card-img-top"> -->
+						<div>
+							<button  type="button" id="small" class="highlighted" onclick="small_price(this)">S</button>
+							<button  type="button" onclick="medium_price(this)">M</button>
+							<button  type="button" onclick="large_price(this)">L</button>
+							<button  type="button" onclick="custom_price(this)">Custom</button>
+						</div>
 						<div class="card-body">
 							<h5 id="title" class="card-title">Pond Cleaning Service</h5>
 						</div>
-						<div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="small-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="large-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="medium-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-							</div>
-							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-							</button>
+						<ul class="list-group list-group-flush">
+							<li id="gallon" class="list-group-item">Max Gallon: 500</li>
+							<li id="time" class="list-group-item">Time: 1 - 3 hours</li>
+							<li class="list-group-item">Draining pond</li>
+							<li class="list-group-item">Powerwash pond</li>
+							<li class="list-group-item">Vacuum pond</li>
+							<li class="list-group-item">Clean Pump Skimmer Filter</li>
+						</ul>
+						<div class="card-body">
+							<h4 id="price">$550 - $750</h4>
 						</div>
+					</div>
+				</article>
+				<article>
+					<div class="card" style="">
+					
+						<!-- <img src="pond-cleaning-images-sizes/small-pond-vertical.png" alt="" class="card-img-top"> -->
+
 						<div >
 							<button type="button" id="small" onclick="small_price()">S</button>
 							<button type="button" onclick="medium_price()">M</button>
 							<button type="button" onclick="large_price()">L</button>
 							<button type="button" onclick="custom_price()">Custom</button>
+						</div>
+						<div class="card-body">
+							<h5 id="title" class="card-title">Pond Construction</h5>
 						</div>
 						<ul class="list-group list-group-flush">
 							<li id="gallon" class="list-group-item">Max Gallon: 500</li>
@@ -617,74 +695,10 @@
 				<article>
 					<div class="card" style="">
 						<div class="card-body">
-							<h5 id="title" class="card-title">Pond Cleaning Service</h5>
+							<h5 id="title" class="card-title">Pond Renovation and Repair</h5>
 						</div>
-						<div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="small-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="large-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="medium-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-							</div>
-							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-							</button>
-						</div>
-						<div >
-							<button type="button" id="small" onclick="small_price()">S</button>
-							<button type="button" onclick="medium_price()">M</button>
-							<button type="button" onclick="large_price()">L</button>
-							<button type="button" onclick="custom_price()">Custom</button>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li id="gallon" class="list-group-item">Max Gallon: 500</li>
-							<li id="time" class="list-group-item">Time: 1 - 3 hours</li>
-							<li class="list-group-item">Draining pond</li>
-							<li class="list-group-item">Powerwash pond</li>
-							<li class="list-group-item">Vacuum pond</li>
-							<li class="list-group-item">Clean Pump Skimmer Filter</li>
-						</ul>
-						<div class="card-body">
-							<h4 id="price">$550 - $750</h4>
-						</div>
-					</div>
-				</article>
-				<article>
-					<div class="card" style="">
-						<div class="card-body">
-							<h5 id="title" class="card-title">Pond Cleaning Service</h5>
-						</div>
-						<div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img src="small-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="large-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-								<div class="carousel-item">
-									<img src="medium-pond-sample.png" class="d-block w-100" alt="...">
-								</div>
-							</div>
-							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Previous</span>
-							</button>
-							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Next</span>
-							</button>
-						</div>
+						<!-- <img src="pond-cleaning-images-sizes/small-pond.png" alt="" class="card-img-top"> -->
+
 						<div >
 							<button type="button" id="small" onclick="small_price()">S</button>
 							<button type="button" onclick="medium_price()">M</button>
@@ -984,7 +998,7 @@
 		</div>
 		<!-- footer -->
 		<div class="container">
-			<footer style="margin-bottom: 0!important" class="py-3 my-4">
+			<footer style="margin-bottom: 60px!important" class="py-3 my-4">
 				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
 					<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
 					<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cleaning</a></li>
@@ -996,7 +1010,45 @@
 				<p class="text-center text-muted">&copy; 2022 Company, Inc</p>
 			</footer>
 		</div>
+
+
+
+
+<!-- footer booking  -->
+
+		<!-- <style>
+
+		
+
+			#booking {
+				height: 60px;
+			
+			
+				position: fixed;
+				bottom: 1px;
+				left: 0;
+				z-index: 200;
+				background: #f8f5f0;
+				width: 100%;
+				box-shadow: 0 1px 4px rgb(0 0 0 / 15%);
+			
+			}
+			
+			
+			
+			
+			</style>
+			
+			<footer id="booking">
+			
+			
+			
+			</footer> -->
+			
 		<!-- Scripts -->
+		
+
+
 		<!-- html5up / using gallery-->
 		<script src="html5up/js/jquery.min.js"></script>
 		<script src="html5up/js/jquery.scrollex.min.js"></script>
@@ -1005,6 +1057,9 @@
 		<script src="html5up/js/breakpoints.min.js"></script>
 		<script src="html5up/js/util.js"></script>
 		<script src="html5up/js/main.js"></script>	
+			<!-- nav.js -->
+			<script src="js/nav.js"></script>
+
 		<!-- bootstrap 5 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<script src='https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js'></script>
